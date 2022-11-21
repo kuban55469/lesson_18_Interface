@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        /**
+        /*
          1.Person деген абстрактный класс тузунуз.
          Анын полялары :
          private int id;
@@ -56,31 +56,31 @@ public class Main {
         Person doctor3 = new Doctor(44, "Jaina Kelsinbekova", 52, 'W', "jaina@gmail.com", "708281398", 47000);
 
         Person[] people1 = {programmer1, programmer2, programmer3};
-        Person[] people2 = {driver1,driver2,driver3};
-       Person[] people3 = {doctor1,doctor2,doctor3};
+        Person[] people2 = {driver1, driver2, driver3};
+        Person[] people3 = {doctor1, doctor2, doctor3};
 
-       Person[] people = {programmer1, programmer2, programmer3, driver1, driver2, driver3, doctor1, doctor2, doctor3};
+        Person[] people = {programmer1, programmer2, programmer3, driver1, driver2, driver3, doctor1, doctor2, doctor3};
 
-       Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(programmer1.toString());
+        System.out.println("Favorite sport is: " + programmer1.favoriteSport("Football"));
+        System.out.println("Favorite language: " + programmer1.favoriteLanguage("English"));
+        System.out.println("Favorite month: " + programmer1.favoriteMonth(Month.DECEMBER));
+        System.out.println("The last name: " + Arrays.toString(programmer1.getLastName()));
+        System.out.println("Dey of brith: " + programmer1.getDateOfBrith(LocalDate.of(2002, 12, 10)));
+        System.out.println(programmer1.getPhoneNumberAndEmail());
+        System.out.println(Arrays.toString(programmer1.getPeopleOfAllAge(people1)));
+        System.out.println();
 
-           System.out.println(programmer1.toString());
-           System.out.println("Favorite sport is: " + programmer1.favoriteSport("Football"));
-           System.out.println("Favorite language: " + programmer1.favoriteLanguage("English"));
-           System.out.println("Favorite month: " + programmer1.favoriteMonth(Month.DECEMBER));
-           System.out.println("The last name: " + Arrays.toString(programmer1.getLastName()));
-           System.out.println("Dey of brith: " + programmer1.getDateOfBrith(LocalDate.of(2002, 12, 10)));
-           System.out.println(programmer1.getPhoneNumberAndEmail());
-           System.out.println(Arrays.toString(programmer1.getPeopleOfAllAge(people1)));
-           System.out.println();
 
         System.out.println(programmer2.toString());
         System.out.println("Favorite sport is: " + programmer2.favoriteSport("Tennis"));
         System.out.println("Favorite language: " + programmer2.favoriteLanguage("Russia"));
         System.out.println("Favorite month: " + programmer2.favoriteMonth(Month.OCTOBER));
         System.out.println("The last name: " + Arrays.toString(programmer2.getLastName()));
-        System.out.println("Dey of brith: " + programmer2.getDateOfBrith(LocalDate.of(2004,10,11)));
+        System.out.println("Dey of brith: " + programmer2.getDateOfBrith(LocalDate.of(2004, 10, 11)));
         System.out.println(programmer2.getPhoneNumberAndEmail());
-        System.out.println(Arrays.toString(programmer2.getPeopleOfAllAge(people2)));
+        System.out.println(Arrays.toString(programmer2.getPeopleOfAllAge(people1)));
         System.out.println();
 
         System.out.println(programmer3.toString());
@@ -88,32 +88,31 @@ public class Main {
         System.out.println("Favorite language: " + programmer3.favoriteLanguage("Kyrgyzstan"));
         System.out.println("Favorite month: " + programmer3.favoriteMonth(Month.MARCH));
         System.out.println("The last name: " + Arrays.toString(programmer3.getLastName()));
-        System.out.println("Dey of brith: " + programmer3.getDateOfBrith(LocalDate.of(2005,3,21)));
+        System.out.println("Dey of brith: " + programmer3.getDateOfBrith(LocalDate.of(2005, 3, 21)));
         System.out.println(programmer3.getPhoneNumberAndEmail());
-        System.out.println(Arrays.toString(programmer3.getPeopleOfAllAge(people3)));
+        System.out.println(Arrays.toString(programmer3.getPeopleOfAllAge(people1)));
         System.out.println();
 
 
-//        System.out.println(driver1.toString());
-//        System.out.println("Favorite sport is: " + driver1.favoriteSport("Cyber sport"));
-//        System.out.println("Favorite language: " + driver1.favoriteLanguage("Uzbek"));
-//        System.out.println("Favorite month: " + driver1.favoriteMonth(Month.JUNE));
-//        System.out.println("The last name: " + Arrays.toString(driver1.getLastName()));
-//        System.out.println("Dey of brith: " + driver1.getDateOfBrith(LocalDate.of(1990,7,21)));
-//        System.out.println(driver1.getPhoneNumberAndEmail());
-//        programmer2.getPeopleOfAllAge(people);
-//        System.out.println();
-//
-//        System.out.println(doctor1.toString());
-//        System.out.println("Favorite sport is: " + doctor1.favoriteSport("Cyber sport"));
-//        System.out.println("Favorite language: " + doctor1.favoriteLanguage("Uzbek"));
-//        System.out.println("Favorite month: " + doctor1.favoriteMonth(Month.FEBRUARY));
-//        System.out.println("The last name: " + Arrays.toString(doctor1.getLastName()));
-//        System.out.println("Dey of brith: " + doctor1.getDateOfBrith(LocalDate.of(1980,2,28)));
-//        System.out.println(doctor1.getPhoneNumberAndEmail());
-//        programmer2.getPeopleOfAllAge(people);
-//        System.out.println();
+        System.out.println(driver1.toString());
+        System.out.println("Favorite sport is: " + driver1.favoriteSport("Cyber sport"));
+        System.out.println("Favorite language: " + driver1.favoriteLanguage("Uzbek"));
+        System.out.println("Favorite month: " + driver1.favoriteMonth(Month.JUNE));
+        System.out.println("The last name: " + Arrays.toString(driver1.getLastName()));
+        System.out.println("Dey of brith: " + driver1.getDateOfBrith(LocalDate.of(1990, 7, 21)));
+        System.out.println(driver1.getPhoneNumberAndEmail());
+        System.out.println(Arrays.toString(driver1.getPeopleOfAllAge(people2)));
+        System.out.println();
 
+        System.out.println(doctor1.toString());
+        System.out.println("Favorite sport is: " + doctor1.favoriteSport("Cyber sport"));
+        System.out.println("Favorite language: " + doctor1.favoriteLanguage("Uzbek"));
+        System.out.println("Favorite month: " + doctor1.favoriteMonth(Month.FEBRUARY));
+        System.out.println("The last name: " + Arrays.toString(doctor1.getLastName()));
+        System.out.println("Dey of brith: " + doctor1.getDateOfBrith(LocalDate.of(1980, 2, 28)));
+        System.out.println(doctor1.getPhoneNumberAndEmail());
+        System.out.println(Arrays.toString(doctor1.getPeopleOfAllAge(people3)));
+        System.out.println();
 
 
     }
