@@ -2,7 +2,6 @@ package task3;
 
 import java.time.LocalDate;
 import java.time.Month;
-import java.util.Scanner;
 
 public class Programmer extends Person implements PersonAble{
     public Programmer(int id, String fullName, int age, char gender, String email, String phoneNumber, double governmentsSalary) {
@@ -10,39 +9,33 @@ public class Programmer extends Person implements PersonAble{
     }
 
     @Override
-    public String favoriteSport() {
-        Scanner scanner = new Scanner(System.in);
-        String lastname = scanner.nextLine();
-        if (getLastName().equals(lastname)) {
-            return "Football";
-        } else if (getLastName().equals(lastname)) {
-            return "Tennis";
-        }else if (getLastName().equals(lastname)) {
-            return "Cyber sport";
-        }else
-            return "Error last name";
+    public String favoriteSport(String name) {
+        return name;
     }
 
     @Override
-    public String favoriteLanguage() {
-        return "English";
+    public String favoriteLanguage(String language) {
+        return language;
     }
 
     @Override
-    public Month favoriteMonth() {
-        return Month.from(Month.NOVEMBER);
+    public Month favoriteMonth(Month month) {
+        return month;
     }
 
-    @Override
-    public String getLastName() {
-        return getFullName().substring(0, 6);
-    }
 
 
     @Override
-    public LocalDate getDateOfBrith() {
-        return LocalDate.of(2002,12,10);
+    public String[] getLastName() {
+        String[] lst = getFullName().split(" ");
+        return new String[]{lst[0]};
     }
+
+    @Override
+    public LocalDate getDateOfBrith(LocalDate localDate) {
+        return localDate;
+    }
+
 
     @Override
     public String getPhoneNumberAndEmail() {
@@ -51,11 +44,6 @@ public class Programmer extends Person implements PersonAble{
 
     @Override
     public long[] getPeopleOfAllAge(Person[] people) {
-        long counter = 0L;
-        for (Person person : people) {
-            counter = person.getAge();
-            counter++;
-        }
-        return new long[(int) counter];
+        return new long[]{getAge()};
     }
 }

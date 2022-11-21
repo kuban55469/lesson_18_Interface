@@ -86,13 +86,11 @@ public abstract class Person implements PersonAble {
     @Override
     public String toString() {
         return "Person{" +
-                "id=" + id +
-                ", fullName='" + fullName + '\'' +
-                ", age=" + age +
-                ", gender=" + gender +
-                ", email='" + email + '\'' +
-                ", phoneNumber='" + phoneNumber + '\'' +
-                ", governmentsSalary=" + governmentsSalary +
+                " Id: " + id +
+                ", Full Name: " + fullName +
+                ", Age: " + age +
+                ", Gender: " + gender +
+                ", Governments Salary: " + governmentsSalary +
                 '}';
     }
 }

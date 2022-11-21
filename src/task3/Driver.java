@@ -9,39 +9,41 @@ public class Driver extends Person implements PersonAble{
         super(id, fullName, age, gender, email, phoneNumber, governmentsSalary);
     }
 
+
     @Override
-    public String favoriteSport() {
-        return null;
+    public String favoriteSport(String sport) {
+        return sport;
     }
 
     @Override
-    public String favoriteLanguage() {
-        return null;
+    public String favoriteLanguage(String language) {
+        return language;
     }
 
     @Override
-    public Month favoriteMonth() {
-        return null;
+    public Month favoriteMonth(Month month) {
+        return month;
     }
 
     @Override
-    public String getLastName() {
-        return null;
+    public String[] getLastName() {
+        String[] lstn = getFullName().split(" ");
+        return new String[]{lstn[0]};
     }
-
 
     @Override
-    public LocalDate getDateOfBrith() {
-        return null;
+    public LocalDate getDateOfBrith(LocalDate localDate) {
+        return localDate;
     }
+
 
     @Override
     public String getPhoneNumberAndEmail() {
-        return null;
+        return "Phone number: " + getPhoneNumber() + "\nEmail: " + getEmail();
     }
 
     @Override
     public long[] getPeopleOfAllAge(Person[] people) {
-        return new long[0];
+        return new long[]{getAge()};
     }
 }
