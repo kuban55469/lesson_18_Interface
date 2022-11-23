@@ -8,7 +8,6 @@ public class Doctor extends Person implements PersonAble{
         super(id, fullName, age, gender, email, phoneNumber, governmentsSalary);
     }
 
-
     @Override
     public String favoriteSport(String sport) {
         return sport;
